@@ -21,9 +21,26 @@ public class FibTransform {
 	 * @return true if the transformation is possible and false otherwise
 	 */
 	public static boolean isPossible_onlyOneDoubling(int n, int m) {
-		// TODO: Implement this method
-		return false; // change this
+		
+		
+
+		return false;
 	}
+
+	public static boolean isFib(int n) {
+        if(n==0){
+            return true;
+        }
+        int fib1 = 0;
+        int fib2 = 1;
+        while (fib2 < n){
+            int saveFib1 = fib1;
+            fib1 = fib2;
+            fib2 = saveFib1 + fib2;
+        }
+        return fib2 == n;
+    }
+
 
 	/**
 	 * Transform a number into a Fibonacci number using at most m steps: One can
@@ -40,8 +57,26 @@ public class FibTransform {
 	 * @return true if the transformation is possible and false otherwise
 	 */
 	public static boolean isPossible(int n, int m) {
-		// TODO: Implement this method
-		return false; // change this
+
+		int doubling = n * 2;
+
+		int addition = n + 1;
+
+		int count = 0;
+
+		if (count <= m) {
+			return true;
+		}
+
+		if (count > m){
+			return false;
+		}
+
+		return true;
 	}
 
+
+
 }
+
+//3 - 4 lines 
