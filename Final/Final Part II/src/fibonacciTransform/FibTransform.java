@@ -22,9 +22,18 @@ public class FibTransform {
 	 */
 	public static boolean isPossible_onlyOneDoubling(int n, int m) {
 		
-		
+		int doubleCount = 0;
+
+		if (doubleCount > 1){
+			return false;
+		}
 
 		return false;
+
+		else if (isFib(n)){
+			return true;
+		}
+		
 	}
 
 	public static boolean isFib(int n) {
